@@ -1,0 +1,15 @@
+spring:
+  ## mysql
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    password: root
+    url: jdbc:mysql://localhost:3306/monitor?useSSL=false&useUnicode=true&characterEncoding=UTF-8&serverTimezone=Asia/Shanghai&allowMultiQueries=true&rewriteBatchedStatements=true
+    username: root
+    type: com.zaxxer.hikari.HikariDataSource
+    hikari:
+      minimum-idle: 10
+      maximum-pool-size: 30
+      idle-timeout: 30000
+      max-lifetime: 900000
+      connection-timeout: 10000
+      connection-test-query: SELECT 1
